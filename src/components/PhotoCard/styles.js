@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { fadeIn } from '../../styles/animation'
 
 export const Figure = styled.figure`
   position: relative;
@@ -18,6 +19,7 @@ export const Image = styled.img`
   height: 100%;
   object-fit: cover;
   box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+  ${fadeIn()};
 `
 
 export const Button = styled.button`
