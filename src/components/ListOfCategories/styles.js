@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { bounceDown } from '../../styles/animation'
 
 export const List = styled.ul`
@@ -6,7 +6,7 @@ export const List = styled.ul`
   overflow-x: scroll;
   width: 100%;
   margin-bottom: 30px;
-  &.fixed {
+  ${props => props.fixed && css`
     position: fixed;
     top: -15px;
     left: 0;
@@ -20,7 +20,7 @@ export const List = styled.ul`
     transform: scale(.6);
     z-index: 1;
     ${bounceDown()};
-  }
+  `}
 `
 
 export const Item = styled.li`
