@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Category } from '../Category'
+import { Loader } from '../Loader'
 import { List, Item } from './styles'
 
 function useCategoriesData () {
@@ -52,8 +53,14 @@ export const ListOfCategories = () => {
 
   return (
     <>
-      {renderList()}
-      {showFixed && renderList(true)}
+      {
+        loading
+        ? <Loader items={8} />
+        : <>
+            {renderList()}
+            {showFixed && renderList(true)}
+          </>
+      }
     </>
   )
 }
