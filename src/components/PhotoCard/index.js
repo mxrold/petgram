@@ -18,7 +18,7 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
       {
         showImage &&
           <>
-            <a href={`/detail/${id}`}>
+            <a href={`/?detail=${id}`}>
               <Figure>
                 <Image src={src} />
               </Figure>
