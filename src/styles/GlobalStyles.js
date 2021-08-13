@@ -22,7 +22,6 @@ export const GlobalStyles = createGlobalStyle`
 
   button {
     background: transparent;
-    border: 0;
     outline: 0;
   }
 
