@@ -4,7 +4,7 @@ import { PhotoCard } from '../PhotoCard'
 import { TextLoading } from './styles'
 
 export const ListOfPhotoCards = ({ categoryId }) => {
-  const { loading,error, data } = useGetPhotos(categoryId)
+  const { loading, error, data } = useGetPhotos(categoryId)
 
   if (error) return window.alert("The photos can't be loaded")
 
