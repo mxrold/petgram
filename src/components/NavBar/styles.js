@@ -31,7 +31,6 @@ export const Link = styled(LinkRouter)`
   border-radius: 9px;
   &[aria-current] {
     color: black;
-  }
     &::after {
       content: '·';
       position: absolute;
@@ -40,5 +39,5 @@ export const Link = styled(LinkRouter)`
       line-height: 2rem;
       ${fadeIn({ time: '0.5s' })};
     }
-    
+  }
 `
