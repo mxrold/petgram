@@ -55,8 +55,8 @@ export const ListOfCategories = () => {
     <>
       {
         loading
-        ? <Loader items={8} />
-        : <>
+          ? <Loader items={8} />
+          : <>
             {renderList()}
             {showFixed && renderList(true)}
           </>

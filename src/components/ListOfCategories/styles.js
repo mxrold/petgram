@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components'
 import { bounceDown } from '../../styles/animation'
+import { Colors } from '../../styles/Colors'
 
 export const List = styled.ul`
   display: flex;
@@ -14,7 +15,7 @@ export const List = styled.ul`
     max-width: 400px;
     margin: 0 auto;
     padding: 5px;
-    background: #fff;
+    background: ${Colors.bgApp};
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     border-radius: 60px;
     transform: scale(.6);

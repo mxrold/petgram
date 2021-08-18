@@ -15,7 +15,6 @@ export const Figure = styled.figure`
   overflow: hidden;
   margin: 0;
   padding: 56.25% 0 0 0;
-  border-radius: 10px;
 `
 
 export const Image = styled.img`

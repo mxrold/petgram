@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import { Colors } from '../../styles/Colors'
 
 export const List = styled.ul`
   display: flex;
@@ -9,7 +10,6 @@ export const List = styled.ul`
 `
 
 export const Item = styled.li`
-  
   padding: 0 8px;
 
 `
@@ -50,7 +50,7 @@ export const Circle = styled.circle`
   fill: transparent;
   stroke-linecap: round;
   stroke-dashoffset: ${props => dashValue(props.r, 0.75)};
-  stroke: #2bde73;
+  stroke: ${Colors.mediumGray};
   stroke-dasharray: ${props => dashValue(props.r, 1)};
   stroke-width: ${props => (50 - props.r) * 2};
   animation: 1.4s ease-in-out infinite both ${loadingCircle};
@@ -65,7 +65,7 @@ export const Svg = styled.svg`
   width: 75px;
   overflow: hidden;
   object-fit: cover;
-  background-color: #DDDDDD;
+  background-color: ${Colors.lightGray};
   border-radius: 50%;
   animation: 2s linear infinite ${loadingSvg};
 `

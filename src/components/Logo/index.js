@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header, Svg } from './styles'
 import { Link } from '@reach/router'
+import { Colors } from '../../styles/Colors'
 
 export const Logo = (props) => {
   return (
@@ -26,8 +27,8 @@ export const Logo = (props) => {
               y2={0.5}
               gradientUnits='objectBoundingBox'
             >
-              <stop offset={0} stopColor='#2bde73' />
-              <stop offset={1} stopColor='#37ba2c' />
+              <stop offset={0} stopColor={Colors.primaryOne} />
+              <stop offset={1} stopColor={Colors.primaryTwo} />
             </linearGradient>
           </defs>
           <path

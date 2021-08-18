@@ -1,5 +1,5 @@
-
 import { createGlobalStyle } from 'styled-components'
+import { Colors } from './Colors'
 
 export const GlobalStyles = createGlobalStyle`
   html {
@@ -31,7 +31,7 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
     margin: 0 auto;
     overscroll-behavior: none;
-    background: #fefefe;
+    background: ${Colors.bgApp};
   }
 
   #app {

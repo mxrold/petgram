@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import { Link as LinkRouter } from '@reach/router'
 import { fadeIn } from '../../styles/animation'
+import { Colors } from '../../styles/Colors'
 
 export const Nav = styled.nav`
   position: fixed;
@@ -16,7 +17,7 @@ export const Nav = styled.nav`
   margin: 0 auto;
   padding: 8px 0;
   z-index: 2;
-  background-color: #eee;
+  background-color: ${Colors.lightGray};
 `
 
 export const Link = styled(LinkRouter)`
@@ -26,17 +27,18 @@ export const Link = styled(LinkRouter)`
   width: max-content;
   height: 100%;
   padding: 4px;
-  color: #888;
+  color: ${Colors.mediumGray};
   text-decoration: none;
   border-radius: 9px;
   &[aria-current] {
-    color: black;
+    color: ${Colors.darkGray};
     &::after {
       content: '·';
       position: absolute;
       bottom: 0;
       font-size: 3.4rem;
       line-height: 2rem;
+      color: ${Colors.darkGray};
       ${fadeIn({ time: '0.5s' })};
     }
   }

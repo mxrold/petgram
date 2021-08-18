@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Colors } from '../../styles/Colors'
 
 export const Header = styled.header`
   display: flex;
@@ -6,7 +7,7 @@ export const Header = styled.header`
   align-items: center;
   height: max-content;
   margin-bottom: 30px;
-  border-bottom: 1px solid #CAF7E3;
+  border-bottom: 1px solid ${Colors.lightGray};
 `
 
 export const Svg = styled.svg`
