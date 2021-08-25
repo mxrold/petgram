@@ -10,7 +10,7 @@ export const Container = styled.div`
   height: max-content;
   margin: 0 auto;
   padding: 18px;
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(0, 0, 0, 0.02);
   border-radius: 3px;
   border: 1px solid rgba(0, 0, 0, .1);
 `
@@ -50,6 +50,7 @@ export const Input = styled.input`
   border: none;
   outline: none;
   border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, .1);
   &::placeholder {
     font-size: .8rem;
     font-weight: 400;
@@ -70,6 +71,9 @@ export const Button = styled.button`
 `
 
 export const Footer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 26px;
 `
 
@@ -78,7 +82,11 @@ export const Text = styled.p`
   color: ${Colors.darkGray};
 `
 
-export const Anchor = styled.a`
-  font-weight: 500;
+export const ButtonFooter = styled.button`
+  margin-left: 4px;
+  font-size: 1rem;
+  font-weight: 600;
   color: ${Colors.secondary};
+  border: none;
+  outline: none;
 `
