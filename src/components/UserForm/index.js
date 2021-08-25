@@ -10,17 +10,17 @@ import {
 } from './styles'
 
 export const UserForm = (props) => {
-  const { onSubmit, activateAuth, register, setRegister, errorMsg, disabled } = props
-  const [data, setData] = useState({ title: '', fn: () => {} })
+  const { onSubmit, register, setRegister, error, disabled } = props
+  const [data, setData] = useState({ title: '', errorMsg: '' })
   const email = useInputValue('')
   const password = useInputValue('')
 
   useEffect(() => {
     const handleChangeForm = () => {
       if (register) {
-        setData({ title: 'Sign Up', fn: onSubmit })
+        setData({ title: 'Sign Up', errorMsg: error && 'User already exists. Try another email' })
       } else {
-        setData({ title: 'Log In', fn: activateAuth })
+        setData({ title: 'Log In', errorMsg: error && 'Sorry, your password was incorrect' })
       }
     }
 
@@ -29,7 +29,7 @@ export const UserForm = (props) => {
 
   const handleSubmit = event => {
     event.preventDefault()
-    data.fn({
+    onSubmit({
       email: email.value,
       password: password.value
     })
@@ -64,11 +64,13 @@ export const UserForm = (props) => {
         </Button>
       </Form>
       {
-        errorMsg &&
-          <AlertError>{errorMsg}</AlertError>
+        error &&
+          <AlertError>{data.errorMsg}</AlertError>
       }
       <Footer>
-        <Text>Don't have an account?</Text>
+        <Text>
+          {register ? 'Have an account?' : "Don't have an account?"}
+        </Text>
         <ButtonFooter onClick={() => setRegister(!register)}>
           {register ? 'Log In' : 'Sign Up'}
         </ButtonFooter>
