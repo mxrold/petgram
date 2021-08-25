@@ -6,7 +6,23 @@ import { ApolloProvider } from '@apollo/react-hooks'
 import { Provider } from './context/Context'
 
 const client = new ApolloClient({
-  uri: 'https://petgram-server-mxrold-g0y4n7aai-mxrold.vercel.app/graphql'
+  uri: 'https://petgram-server-mxrold-g0y4n7aai-mxrold.vercel.app/graphql',
+  request: operation => {
+    const token = window.sessionStorage.getItem('token')
+    const authorization = token ? `Bearer ${token}` : ''
+    operation.setContext({
+      headers: {
+        authorization
+      }
+    })
+  },
+  onError: error => {
+    const { networkError } = error
+    if (networkError && networkError.result.code === 'invalid_token') {
+      window.sessionStorage.removeItem('token')
+      window.location.href = '/user'
+    }
+  }
 })
 
 ReactDOM.render(
