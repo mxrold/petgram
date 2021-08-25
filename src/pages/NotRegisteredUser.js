@@ -13,7 +13,10 @@ export const NotRegisteredUser = () => {
     const input = { email, password }
     const variable = { input }
     mutation({ variables: variable })
-      .then(activateAuth)
+      .then(response => {
+        const { data } = response
+        activateAuth(register ? data.signup : data.login)
+      })
   }
 
   return (
