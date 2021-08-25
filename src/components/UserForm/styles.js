@@ -37,6 +37,9 @@ export const DataContainerText = styled.p`
 
 export const Form = styled.form`
   width: 100%;
+  &[disabled] {
+    opacity: .7;
+  };
 `
 
 export const Input = styled.input`
@@ -55,7 +58,10 @@ export const Input = styled.input`
     font-size: .8rem;
     font-weight: 400;
     color: ${Colors.mediumGray};
-  }
+  };
+  &[disabled] {
+    opacity: .7;
+  };
 `
 
 export const Button = styled.button`
@@ -68,6 +74,19 @@ export const Button = styled.button`
   border: none;
   outline: none;
   border-radius: 3px;
+`
+
+export const AlertError = styled.span`
+  width: 100%;
+  height: max-content;
+  margin-top: 12px;
+  padding: 8px 0; 
+  font-size: 1rem;
+  background-color: ${Colors.alertBg};
+  color: ${Colors.alertText};
+  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, .1);
+  text-align: center;
 `
 
 export const Footer = styled.div`

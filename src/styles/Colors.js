@@ -5,5 +5,7 @@ export const Colors = {
   lightGray: '#E5E7EB',
   mediumGray: '#6B7280',
   darkGray: '#374151',
-  secondary: '#2563EB'
+  secondary: '#2563EB',
+  alertBg: '#FECACA',
+  alertText: '#B91C1C'
 }

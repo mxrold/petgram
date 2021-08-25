@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { useInputValue } from '../../hooks/useInputValue'
 import {
-  Container,
-  Figure, DataContainer,
-  DataContainerText, Image,
-  Form, Input,
-  Button, Footer,
-  Text, ButtonFooter
+  Container, Figure,
+  DataContainer, DataContainerText,
+  Image, Form,
+  Input, Button,
+  Footer, Text,
+  ButtonFooter, AlertError
 } from './styles'
 
-export const UserForm = ({ onSubmit, activateAuth, register, setRegister }) => {
+export const UserForm = (props) => {
+  const { onSubmit, activateAuth, register, setRegister, errorMsg, disabled } = props
   const [data, setData] = useState({ title: '', fn: () => {} })
   const email = useInputValue('')
   const password = useInputValue('')
@@ -46,20 +47,26 @@ export const UserForm = ({ onSubmit, activateAuth, register, setRegister }) => {
           {data.title} with your Petgram account and discover the amazing world of pets
         </DataContainerText>
       </DataContainer>
-      <Form onSubmit={handleSubmit}>
+      <Form onSubmit={handleSubmit} disabled={disabled}>
         <Input
           placeholder='Email'
           {...email}
+          disabled={disabled}
         />
         <Input
           placeholder='Password'
           type='password'
           {...password}
+          disabled={disabled}
         />
         <Button>
           {data.title}
         </Button>
       </Form>
+      {
+        errorMsg &&
+          <AlertError>{errorMsg}</AlertError>
+      }
       <Footer>
         <Text>Don't have an account?</Text>
         <ButtonFooter onClick={() => setRegister(!register)}>
