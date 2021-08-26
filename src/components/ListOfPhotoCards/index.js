@@ -12,8 +12,8 @@ export const ListOfPhotoCards = ({ categoryId }) => {
     <>
       {
         loading
-        ? <TextLoading>...Loading photos 🐶</TextLoading>
-        : <ul>
+          ? <TextLoading>...Loading photos 🐶</TextLoading>
+          : <ul>
             {
               data.photos.map(item => (
                 <PhotoCard key={item.id} {...item} />
