@@ -3,6 +3,7 @@ import { Context } from '../context/Context'
 import { UserForm } from '../components/UserForm'
 import { RegisterMutation } from '../container/RegisterMutation'
 import { LoginMutation } from '../container/LoginMutation'
+import { Helmet } from '../utils/Helmet'
 
 export const NotRegisteredUser = () => {
   const [register, setRegister] = useState(true)
@@ -20,12 +21,15 @@ export const NotRegisteredUser = () => {
   }
 
   return (
-    <UserForm
-      onSubmit={onSubmit}
-      register={register}
-      setRegister={setRegister}
-      error={error}
-      disabled={loading}
-    />
+    <>
+      <Helmet title={`${register ? 'Sign Up' : 'Log In'}`} description='Discover the amazing world of pets' />
+      <UserForm
+        onSubmit={onSubmit}
+        register={register}
+        setRegister={setRegister}
+        error={error}
+        disabled={loading}
+      />
+    </>
   )
 }

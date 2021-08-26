@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from '../utils/Helmet'
 import { useGetFavorites } from '../hooks/useGetFavorites'
 import { ListOfFavs } from '../components/ListOfFavs'
 
@@ -9,6 +10,9 @@ export const Favs = () => {
   if (error) return <h2>...Error </h2>
 
   return (
-    <ListOfFavs favs={data.favs} />
+    <>
+      <Helmet title='Your favorites' description='Discover all of your favorites images' />
+      <ListOfFavs favs={data.favs} />
+    </>
   )
 }
