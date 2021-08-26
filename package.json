@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack serve --open --mode development",
+    "dev": "webpack serve --open --mode development",
     "build": "webpack",
     "lint": "standard",
     "lint:fix": "standard --fix",
