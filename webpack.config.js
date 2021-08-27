@@ -72,7 +72,7 @@ module.exports = {
           }
         },
         {
-          urlPattern: new RegExp('https://https://petgram-server-mxrold-g0y4n7aai-mxrold.vercel.app/'),
+          urlPattern: new RegExp('https://petgram-server-mxrold-rho.vercel.app/'),
           handler: 'NetworkFirst',
           options: {
             cacheName: 'api'
