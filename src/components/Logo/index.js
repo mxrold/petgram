@@ -9,7 +9,7 @@ export const Logo = (props) => {
       <Link to='/'>
         <Svg
           width={387.922}
-          height={92}
+          height={62}
           xmlns='http://www.w3.org/2000/svg'
           viewBox='56.039 13.989 387.922 92'
           style={{

@@ -7,7 +7,7 @@ export const Favs = () => {
   const { data, loading, error } = useGetFavorites()
 
   if (loading) return <h2>...Loading </h2>
-  if (error) return <h2>...Error </h2>
+  if (error) return <h2>...error </h2>
 
   return (
     <>

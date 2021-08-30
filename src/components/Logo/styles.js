@@ -3,7 +3,7 @@ import { Colors } from '../../styles/Colors'
 
 export const Header = styled.header`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: max-content;
   margin-bottom: 30px;
@@ -11,6 +11,6 @@ export const Header = styled.header`
 `
 
 export const Svg = styled.svg`
-  width: 220px;
-  margin: -30px auto 0 auto;
+  width: 160px;
+  margin: -20px auto 0 auto;
 `

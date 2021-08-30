@@ -40,7 +40,7 @@ export const UserForm = (props) => {
   return (
     <Container>
       <Figure>
-        <Image src='https://i.ibb.co/RCtjfSB/form-image-petgram.png' alt='Form image Petgram' title='Form image Petgram' />
+        <Image src='https://i.ibb.co/317GcwG/form-image-petgram.png' alt='Form image Petgram' title='Form image Petgram' />
       </Figure>
       <DataContainer>
         <DataContainerText>

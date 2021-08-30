@@ -35,8 +35,8 @@ export const Link = styled(LinkRouter)`
     &::after {
       content: '·';
       position: absolute;
-      bottom: 0;
-      font-size: 3.4rem;
+      bottom: -5px;
+      font-size: 2.4rem;
       line-height: 2rem;
       color: ${Colors.darkGray};
       ${fadeIn({ time: '0.5s' })};

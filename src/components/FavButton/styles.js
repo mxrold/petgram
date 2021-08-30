@@ -20,6 +20,7 @@ export const Button = styled.button`
     border: 2px solid ${Colors.primaryOne};
   `}
 `
+
 export const Likes = styled.span`
   display: block;
   margin-top: 24px;

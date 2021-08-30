@@ -6,18 +6,14 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 90%;
   height: max-content;
   margin: 0 auto;
-  padding: 18px;
-  background-color: rgba(0, 0, 0, 0.02);
-  border-radius: 3px;
-  border: 1px solid rgba(0, 0, 0, .1);
 `
 
 export const Figure = styled.figure`
-  width: 76px;
-  height: 100px;
+  width: 111px;
+  height: 111px;
 `
 
 export const Image = styled.img`
@@ -44,7 +40,7 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   width: 100%;
-  height: 36px;
+  height: 40px;
   margin-bottom: 18px;
   padding-left: 9px;
   font-size: 1rem;
